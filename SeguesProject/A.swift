@@ -9,7 +9,7 @@
 import UIKit
 
 
-class A: UIViewController , SourceForB, SourceForC{
+class A: UIViewController , SourceForB, SourceForC, SourceForD{
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
@@ -24,6 +24,17 @@ class A: UIViewController , SourceForB, SourceForC{
         vc.element1 = self.randomElement
         vc.element2 = self.randomElement
         vc.opCode = .Op1
+    }
+    
+    func prepare(for segue: UIStoryboardSegue, from sender: Any?, toD vc: D) {
+        
+        if segue.identifier == "View"{
+            vc.status = "View mode"
+        }
+        else if segue.identifier == "Edit"{
+            vc.status = "Edit mode"
+        }
+        else{ fatalError()}
     }
 
     var randomElement : Element! {

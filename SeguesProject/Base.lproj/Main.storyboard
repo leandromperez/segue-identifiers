@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yPR-Za-z2Q">
-                                <rect key="frame" x="110" y="136" width="101" height="208"/>
+                                <rect key="frame" x="110" y="68" width="101" height="344"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4q-HO-tnM">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="72"/>
@@ -44,6 +44,22 @@
                                         <state key="normal" title="Go to C"/>
                                         <connections>
                                             <segue destination="NSA-og-zK4" kind="show" identifier="" id="61P-Lq-J5G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egC-I5-vTM" userLabel="Edit D">
+                                        <rect key="frame" x="0.0" y="228" width="101" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Edit D"/>
+                                        <connections>
+                                            <segue destination="em1-el-mA0" kind="show" identifier="Edit" id="Q6q-xH-QDF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tr5-U7-w9J" userLabel="View D">
+                                        <rect key="frame" x="0.0" y="296" width="101" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="View D"/>
+                                        <connections>
+                                            <segue destination="em1-el-mA0" kind="show" identifier="View" id="00w-c1-eR5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -196,5 +212,60 @@
             </objects>
             <point key="canvasLocation" x="892.5" y="773.75"/>
         </scene>
+        <!--D-->
+        <scene sceneID="AJG-YD-8j6">
+            <objects>
+                <viewController id="em1-el-mA0" customClass="D" customModule="SeguesProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4nU-8e-tdo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cua-ui-2I9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZWd-ue-xDK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nis-DD-Qfv">
+                                <rect key="frame" x="117.5" y="151" width="85" height="178"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVq-eh-OQ7">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waz-4R-yTe">
+                                        <rect key="frame" x="0.0" y="92" width="85" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wK-nX-XBv">
+                                        <rect key="frame" x="0.0" y="148" width="85" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <segue destination="pYo-wk-Vom" kind="unwind" unwindAction="unwindToAWithUnwindSegue:" id="mJz-Vr-rrU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nis-DD-Qfv" firstAttribute="centerY" secondItem="ZWd-ue-xDK" secondAttribute="centerY" id="X2w-J1-FLJ"/>
+                            <constraint firstItem="nis-DD-Qfv" firstAttribute="centerX" secondItem="ZWd-ue-xDK" secondAttribute="centerX" id="t37-VE-5VZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="waz-4R-yTe" id="y4c-Ph-OPa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVi-4u-029" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pYo-wk-Vom" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="1325"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="00w-c1-eR5"/>
+    </inferredMetricsTieBreakers>
 </document>
